@@ -7,34 +7,27 @@ node {
 
   stage('Setup') {
     git([
-      url: env.GIT_URL ? env.GIT_URL : 'https://github.com/venicegeo/pz-logger',
+      url: env.GIT_URL ? env.GIT_URL : 'https://github.com/venicegeo/dg-pz-logger',
       branch: "master"
     ])
   }
 
   stage('Archive') {
+    deleteDir()
     withGolang {
       sh """
-        # install metalinter
-        go get -u github.com/alecthomas/gometalinter
-        gometalinter --install
-
-        # build ourself, and go there
+        go get github.com/venicegeo/dg-pz-gocommon/gocommon
         go get github.com/venicegeo/pz-logger
-        cd \$GOPATH/src/github.com/venicegeo/pz-logger
 
-        go test -v -coverprofile=${root}/logger.cov -coverpkg github.com/venicegeo/pz-logger/logger github.com/venicegeo/pz-logger/logger
-        go tool cover -func=${root}/logger.cov -o ${root}/logger.cov.txt
+        cd \$GOPATH/src/github.com/venicegeo/dg-pz-logger
+
+        go test -v github.com/venicegeo/dg-pz-logger/logger
 
         cd ${root}
 
         cp \$GOPATH/bin/pz-logger ${root}/pz-logger
         tar -cvzf pz-logger.tgz \
-            pz-logger \
-            *.cov \
-            *.cov.txt \
-            glide.lock \
-            glide.yaml
+            pz-logger
       """
     }
     mavenPush()
@@ -54,7 +47,7 @@ node {
 
   stage('Reset') {
     git([
-      url: env.GIT_URL ? env.GIT_URL : 'https://github.com/venicegeo/pz-logger',
+      url: env.GIT_URL ? env.GIT_URL : 'https://github.com/venicegeo/dg-pz-logger',
       branch: "master"
     ])
   }

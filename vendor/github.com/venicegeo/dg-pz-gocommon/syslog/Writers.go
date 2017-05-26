@@ -22,8 +22,8 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/venicegeo/pz-gocommon/elasticsearch"
-	piazza "github.com/venicegeo/pz-gocommon/gocommon"
+	"github.com/venicegeo/dg-pz-gocommon/elasticsearch"
+	piazza "github.com/venicegeo/dg-pz-gocommon/gocommon"
 )
 
 const (

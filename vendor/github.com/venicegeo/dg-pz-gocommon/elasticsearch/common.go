@@ -20,7 +20,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/venicegeo/pz-gocommon/gocommon"
+	"github.com/venicegeo/dg-pz-gocommon/gocommon"
 )
 
 // MappingElementTypeName is just an alias for a string.

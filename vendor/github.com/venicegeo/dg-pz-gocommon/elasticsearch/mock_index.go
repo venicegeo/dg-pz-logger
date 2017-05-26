@@ -21,7 +21,7 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/venicegeo/pz-gocommon/gocommon"
+	"github.com/venicegeo/dg-pz-gocommon/gocommon"
 )
 
 const percolateTypeName = ".percolate"

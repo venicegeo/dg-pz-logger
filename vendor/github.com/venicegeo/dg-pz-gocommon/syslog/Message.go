@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	piazza "github.com/venicegeo/pz-gocommon/gocommon"
+	piazza "github.com/venicegeo/dg-pz-gocommon/gocommon"
 )
 
 //---------------------------------------------------------------------

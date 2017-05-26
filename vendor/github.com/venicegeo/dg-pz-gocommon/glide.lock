@@ -1,5 +1,5 @@
-hash: 65a0e6eb5fc7008f41468f98d8a91dd4d0ed8e56864dc5304e1372c5230cbe27
-updated: 2017-02-15T10:20:32.823305151-05:00
+hash: fbbec47dace86802f36e092edefa8e8b5a02e1736d50b520a6bd1fa570999e4f
+updated: 2017-05-26T11:12:12.644416752-04:00
 imports:
 - name: github.com/braintree/manners
   version: 82a8879fc5fd0381fa8b2d8033b19bf255252088
@@ -16,7 +16,7 @@ imports:
 - name: github.com/eapache/queue
   version: 44cc805cf13205b55f69e14bcb69867d1ae92f98
 - name: github.com/gin-gonic/gin
-  version: e2212d40c62a98b388a5eb48ecbdcf88534688ba
+  version: d5b353c5d5a560322e6d96121c814115562501f7
   subpackages:
   - binding
   - render
@@ -25,15 +25,13 @@ imports:
   subpackages:
   - proto
 - name: github.com/golang/snappy
-  version: 7db9049039a047d955fe8c19b83c8ff5abd765c7
-- name: github.com/klauspost/crc32
-  version: 1bab8b35b6bb565f92cbc97939610af9369f942a
+  version: 553a641470496b2327abcac10b36396bd98e45c9
 - name: github.com/manucorporat/sse
   version: ee05b128a739a0fb76c7ebd3ae4810c1de808d6d
 - name: github.com/mattn/go-isatty
-  version: 281032e84ae07510239465db46bf442aa44b953a
+  version: fc9e8d8ef48496124e79ae0df75490096eccf6fe
 - name: github.com/pierrec/lz4
-  version: 5c9560bfa9ace2bf86080bf40d46b34ae44604df
+  version: 5a3d2245f97fc249850e7802e3c01fad02a1c316
 - name: github.com/pierrec/xxHash
   version: 5a004441f897722c627870a981d02b29924215fa
   subpackages:
@@ -41,25 +39,25 @@ imports:
 - name: github.com/rcrowley/go-metrics
   version: 1f30fe9094a513ce4c700b9a54458bbb0c96996c
 - name: github.com/Shopify/sarama
-  version: 0fb560e5f7fbcaee2f75e3c34174320709f69944
+  version: c01858abb625b73a3af51d0798e4ad42c8147093
 - name: golang.org/x/net
   version: f315505cf3349909cdf013ea56690da34e96a451
   subpackages:
   - context
   - context/ctxhttp
 - name: golang.org/x/sys
-  version: e24f485414aeafb646f6fca458b0bf869c0880a1
+  version: a55a76086885b80f79961eacb876ebd8caf3868d
   subpackages:
   - unix
 - name: gopkg.in/go-playground/validator.v8
   version: c193cecd124b5cc722d7ee5538e945bdb3348435
 - name: gopkg.in/olivere/elastic.v3
-  version: 96b262cf1d25006d71bd495fd99b590493cff29e
+  version: eb47340e05b08cae24208569de7240fecde96bd2
   subpackages:
   - backoff
   - uritemplates
 - name: gopkg.in/yaml.v2
-  version: a3f3340b5840cee44f372bddb5880fcbc419b46a
+  version: cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b
 testImports:
 - name: github.com/pmezard/go-difflib
   version: 792786c7400a136282c1664665ae0a8db921c6c2

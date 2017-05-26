@@ -1,0 +1,47 @@
+@Library('pipelib@master') _
+
+node {
+  def root = pwd()
+
+  stage('Setup') {
+    git([
+      url: env.GIT_URL ? env.GIT_URL : 'https://github.com/venicegeo/dg-pz-gocommon',
+      branch: "master"
+    ])
+  }
+
+  stage('Archive') {
+    withGolang {
+      sh """
+        # install metalinter
+        go get -u github.com/alecthomas/gometalinter
+        gometalinter --install
+
+        # build ourself, and go there
+        go get github.com/venicegeo/dg-pz-gocommon/gocommon
+        cd \$GOPATH/src/github.com/venicegeo/dg-pz-gocommon
+
+        # run unit tests w/ coverage collection
+        for i in gocommon elasticsearch kafka syslog
+        do
+          go test -v -coverprofile=${root}/\$i.cov github.com/venicegeo/dg-pz-gocommon/\$i
+          go tool cover -func=${root}/\$i.cov -o ${root}/\$i.cov.txt
+          cat ${root}/\$i.cov.txt
+        done
+
+        cd ${root}
+
+        tar -cvzf pz-gocommon.tgz \
+            *.cov \
+            *.cov.txt \
+            glide.lock \
+            glide.yaml
+      """
+    }
+    mavenPush()
+  }
+
+  stage('Cleanup') {
+    deleteDir()
+  }
+}

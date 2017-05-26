@@ -24,8 +24,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
-	"github.com/venicegeo/pz-gocommon/elasticsearch"
-	"github.com/venicegeo/pz-gocommon/gocommon"
+	"github.com/venicegeo/dg-pz-gocommon/elasticsearch"
+	"github.com/venicegeo/dg-pz-gocommon/gocommon"
 )
 
 //---------------------------------------------------------------------

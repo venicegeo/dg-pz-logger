@@ -1,15 +1,13 @@
-package: github.com/venicegeo/pz-logger
+package: github.com/venicegeo/dg-pz-logger
 import:
 - package: github.com/gin-gonic/gin
-  version: e2212d40c62a98b388a5eb48ecbdcf88534688ba
 - package: github.com/venicegeo/dg-pz-gocommon
   subpackages:
   - elasticsearch
-  - dg-gocommon
+  - gocommon
   - syslog
 testImport:
 - package: github.com/stretchr/testify
-  version: f390dcf405f7b83c997eac1b06768bb9f44dec18
   subpackages:
   - assert
   - suite

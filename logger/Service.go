@@ -22,9 +22,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/venicegeo/pz-gocommon/elasticsearch"
-	"github.com/venicegeo/pz-gocommon/gocommon"
-	pzsyslog "github.com/venicegeo/pz-gocommon/syslog"
+	"github.com/venicegeo/dg-pz-gocommon/elasticsearch"
+	"github.com/venicegeo/dg-pz-gocommon/gocommon"
+	pzsyslog "github.com/venicegeo/dg-pz-gocommon/syslog"
 )
 
 type Service struct {

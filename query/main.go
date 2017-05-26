@@ -23,8 +23,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/venicegeo/pz-gocommon/gocommon"
-	pzsyslog "github.com/venicegeo/pz-gocommon/syslog"
+	"github.com/venicegeo/dg-pz-gocommon/gocommon"
+	pzsyslog "github.com/venicegeo/dg-pz-gocommon/syslog"
 )
 
 const LoggerUrl = "http://pz-logger.int.geointservices.io"

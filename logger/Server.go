@@ -20,8 +20,8 @@ import (
 	"encoding/json"
 
 	"github.com/gin-gonic/gin"
-	"github.com/venicegeo/pz-gocommon/gocommon"
-	syslogger "github.com/venicegeo/pz-gocommon/syslog"
+	"github.com/venicegeo/dg-pz-gocommon/gocommon"
+	syslogger "github.com/venicegeo/dg-pz-gocommon/syslog"
 )
 
 type Server struct {

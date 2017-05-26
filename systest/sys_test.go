@@ -28,8 +28,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	"github.com/venicegeo/pz-gocommon/gocommon"
-	pzsyslog "github.com/venicegeo/pz-gocommon/syslog"
+	"github.com/venicegeo/dg-pz-gocommon/gocommon"
+	pzsyslog "github.com/venicegeo/dg-pz-gocommon/syslog"
 )
 
 func sleep(n int) {

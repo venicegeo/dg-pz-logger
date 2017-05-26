@@ -13,18 +13,8 @@ PATH=$PATH:"$GOPATH"/bin
 
 go version
 
-# install metalinter
-go get -u github.com/alecthomas/gometalinter
-gometalinter --install
-
 # build ourself, and go there
-go get github.com/venicegeo/pz-logger
-cd $GOPATH/src/github.com/venicegeo/pz-logger
+go get github.com/venicegeo/dg-pz-logger
+cd $GOPATH/src/github.com/venicegeo/dg-pz-logger
 
-# run unit tests w/ coverage collection
-go test -v -coverprofile=$root/logger.cov -coverpkg github.com/venicegeo/pz-logger/logger github.com/venicegeo/pz-logger/logger
-go tool cover -func=$root/logger.cov -o $root/logger.cov.txt
-
-# lint
-# sh ci/metalinter.sh | tee $root/lint.txt
-# wc -l $root/lint.txt
+go test -v github.com/venicegeo/dg-pz-logger/logger

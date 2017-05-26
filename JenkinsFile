@@ -28,9 +28,10 @@ node {
 
         go test -v github.com/venicegeo/dg-pz-logger/logger
 
+        go build
+        cp dg-pz-logger ${root}/pz-logger
         cd ${root}
 
-        cp \$GOPATH/bin/pz-logger ${root}/pz-logger
         tar -cvzf pz-logger.tgz \
             pz-logger
       """

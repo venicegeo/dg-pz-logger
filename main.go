@@ -23,10 +23,10 @@ import (
 	"reflect"
 	"regexp"
 
-	"github.com/venicegeo/pz-gocommon/elasticsearch"
-	"github.com/venicegeo/pz-gocommon/gocommon"
-	pzsyslog "github.com/venicegeo/pz-gocommon/syslog"
-	pzlogger "github.com/venicegeo/pz-logger/logger"
+	"github.com/venicegeo/dg-pz-gocommon/elasticsearch"
+	"github.com/venicegeo/dg-pz-gocommon/gocommon"
+	pzsyslog "github.com/venicegeo/dg-pz-gocommon/syslog"
+	pzlogger "github.com/venicegeo/dg-pz-logger/logger"
 )
 
 func main() {

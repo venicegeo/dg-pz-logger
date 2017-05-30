@@ -40,32 +40,6 @@ node {
 
   stage('CI Deploy') {
     cfPush()
-    zap {
-      threadfixId = THREADFIX_ID
-    }
-    cfBgDeploy()
-  }
-
-  stage('Integration Testing') {
-    postman()
-  }
-
-  stage('Reset') {
-    git([
-      url: env.GIT_URL ? env.GIT_URL : 'https://github.com/venicegeo/dg-pz-logger',
-      branch: "master"
-    ])
-  }
-
-  stage('Staging Deploy') {
-    cfPush {
-      cfDomain  = 'stage.geointservices.io'
-      cfSpace   = 'stage'
-    }
-    cfBgDeploy {
-      cfDomain  = 'stage.geointservices.io'
-      cfSpace   = 'stage'
-    }
   }
 
   stage('Cleanup') {

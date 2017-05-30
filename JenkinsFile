@@ -13,7 +13,6 @@ node {
   }
 
   stage('Archive') {
-    deleteDir()
     withGolang {
       sh """
         go get github.com/braintree/manners

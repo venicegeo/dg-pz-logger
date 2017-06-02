@@ -25,9 +25,7 @@ node {
         go get github.com/venicegeo/dg-pz-gocommon/gocommon
 
         go get github.com/venicegeo/dg-pz-logger
-        cd \$GOPATH/src/github.com/venicegeo/dg-pz-gocommon
-        git log --pretty=format:'%h' -n 1
-        cd ../dg-pz-logger
+        cd \$GOPATH/src/github.com/venicegeo/dg-pz-logger
 
         go test -v github.com/venicegeo/dg-pz-logger/logger
 
@@ -46,11 +44,9 @@ node {
       cfPush()
       cfBgDeploy()
     } finally {
-      stage 'Cleanup'
+      stage ('Cleanup') {
+        deleteDir()
+      }
     }	  
-  }
-
-  stage('Cleanup') {
-    deleteDir()
   }
 }

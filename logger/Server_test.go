@@ -18,6 +18,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"strings"
 	"testing"
 	"time"
 
@@ -73,6 +74,7 @@ func (suite *LoggerTester) setupFixture() {
 
 		suite.kit, err = NewKit(sys, logWriter, auditWriter, idx, false)
 		assert.NoError(err)
+		suite.kit.Url = strings.Replace(suite.kit.Url, "https", "http", 1)
 
 		err = suite.kit.Start()
 		assert.NoError(err)

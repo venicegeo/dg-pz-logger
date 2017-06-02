@@ -23,9 +23,11 @@ node {
         go get gopkg.in/olivere/elastic.v3
         go get github.com/Shopify/sarama
         go get github.com/venicegeo/dg-pz-gocommon/gocommon
-        go get github.com/venicegeo/dg-pz-logger
 
-        cd \$GOPATH/src/github.com/venicegeo/dg-pz-logger
+        go get github.com/venicegeo/dg-pz-logger
+        cd \$GOPATH/src/github.com/venicegeo/dg-pz-gocommon
+        git log --pretty=format:'%h' -n 1
+        cd ../dg-pz-logger
 
         go test -v github.com/venicegeo/dg-pz-logger/logger
 
@@ -39,13 +41,13 @@ node {
     }
   }
 
-  stage('CI Deploy') {
+  stage('Staging Deploy') {
     try {
       cfPush()
       cfBgDeploy()
     } finally {
       stage 'Cleanup'
-    }
+    }	  
   }
 
   stage('Cleanup') {
